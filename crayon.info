@@ -1,0 +1,4 @@
+; $Id$
+core = "6.x"
+description = "UI helper for displaying condensed, color-coded swatches and popups."
+name = "Crayon"
