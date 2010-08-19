@@ -6,6 +6,7 @@
  */
 function crayon_views_handlers() {
   $handlers = array();
+  $handlers['handlers'] = array();
   $handlers['info']['path'] = drupal_get_path('module', 'crayon') .'/views';
   // OG: Group.
   if (module_exists('og_views')) {
