@@ -1,5 +1,4 @@
 <?php
-// $Id$
 
 class crayon_views_handler_field_og extends og_views_handler_field_og_group_nids {
   /**

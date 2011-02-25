@@ -1,5 +1,4 @@
 <?php
-// $Id$
 
 class crayon_views_handler_field_project extends casetracker_views_handler_field_project_name {
   /**

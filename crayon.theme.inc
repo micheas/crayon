@@ -1,5 +1,4 @@
 <?php
-// $Id$
 
 /**
  * Preprocessor for theme('crayon_popup').
