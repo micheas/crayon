@@ -1,67 +1,77 @@
-/* $Id: crayon.css,v 1.1 2010/08/10 16:15:27 yhahn Exp $ */
+
+@import "compass/css3";
 
 .crayon-swatch {
-  width:30px;
-  height:15px;
-  line-height:15px;
-  display:block;
-  float:left;
-  margin-right:5px;
+  width: 30px;
+  height: 15px;
+  line-height: 15px;
+  display: block;
+  float: left;
+  margin: {
+    right: 5px;
   }
-
-  .crayon-swatch .crayon-swatch-label {
+  .crayon-swatch-label {
     height:15px;
     text-align:center;
     color:#fff;
     font-size:9px;
     display:block;
     overflow:hidden;
-    }
-
-.crayon-anchor { position:relative; }
-.crayon-anchor .crayon-popup { display:none; }
-
-.crayon-anchor:hover .crayon-popup {
-  display:block;
-
-  position:absolute;
-  left:20px;
-  bottom:100%;
-  z-index:1000;
-
-  width:160px;
-  margin:0px 0px -5px -40px;
-  padding:0px 0px 10px;
-  border-top:1px solid #e0e0e0;
-  background:url(crayon-popup.png) 0px 100% no-repeat;
-  font-size:11px;
-  color:#333;
+  }
+}
+.crayon-anchor {
+  position: relative;
+  .crayon-popup { 
+    display: none;
   }
 
-  .crayon-anchor:hover .crayon-popup .crayon-popup-label {
-    word-wrap:break-word;
-    display:block;
-    padding:5px;
-    line-height:15px;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
+  &:hover {
+    .crayon-popup {
+      background: inline-image('crayon-popup.png') 0px 100% no-repeat;
+      border: {
+        top: 1px solid #e0e0e0;
+      }
+      bottom: 100%;
+      color: #333;
+      display: block;
+      font-size: 11px;
+      left: 20px;
+      margin: 0px 0px -5px -40px;
+      padding: 0px 0px 10px;
+      position: absolute;
+      width: 160px;
+      z-index: 1000;
     }
 
-  .crayon-anchor:hover .crayon-popup .with-swatch {
-    padding-left:25px;
-    position:relative;
+    .crayon-popup {
+      .crayon-popup-label {
+        word-wrap: break-word;
+        display: block;
+        padding: 5px;
+        line-height: 15px;
+        @include border-radius(5px);
+      }
+
+      .with-swatch {
+        padding: {
+          left: 25px;
+        }
+        position: relative;
+      }
+
+      .crayon-swatch {
+        height: 15px;
+        left: 5px;
+        position: absolute;
+        top: 5px;
+        width: 15px;
+      }
+      * {
+        display: inline;
+      }
     }
-
-  .crayon-anchor:hover .crayon-popup .crayon-swatch {
-    position:absolute;
-    left:5px;
-    top:5px;
-    height:15px;
-    width:15px;
-    }
-
-  .crayon-anchor:hover .crayon-popup * { display:inline; }
-
+  }
+}
 .crayon-0  {background-color: #D96666; border-color: #A32929; }
 .crayon-1  {background-color: #E67399; border-color: #B1365F; }
 .crayon-2  {background-color: #B373B3; border-color: #7A367A; }

@@ -16,7 +16,7 @@ function crayon_enable() {
  * Implementation of hook_views_api().
  */
 function crayon_views_api() {
-  return array('api' => '2');
+  return array('api' => '3');
 }
 
 /**

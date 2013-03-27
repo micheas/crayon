@@ -4,7 +4,7 @@
  * Preprocessor for theme('crayon_popup').
  */
 function template_preprocess_crayon_popup(&$vars) {
-  drupal_add_css(drupal_get_path('module', 'crayon') .'/crayon.css');
+  drupal_add_css(drupal_get_path('module', 'crayon') .'/css/crayon.css');
 
   $vars['label'] = filter_xss_admin($vars['label']);
   $vars['label_attr'] = array('class' => 'crayon-popup-label');
@@ -27,7 +27,7 @@ function template_preprocess_crayon_popup(&$vars) {
  * Preprocessor for theme('crayon_swatch').
  */
 function template_preprocess_crayon_swatch(&$vars) {
-  drupal_add_css(drupal_get_path('module', 'crayon') .'/crayon.css');
+  drupal_add_css(drupal_get_path('module', 'crayon') .'/css/crayon.css');
 
   $vars['attr'] = array('class' => 'crayon-anchor crayon-swatch');
   if (crayon_is_color($vars['color'])) {
