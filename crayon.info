@@ -1,6 +1,8 @@
 core = "7.x"
 description = "UI helper for displaying condensed, color-coded swatches and popups."
 name = "Crayon"
+dependencies[] = ctools
+dependencies[] = views
 files[] = views/crayon_views_handler_field_og.inc
 files[] = views/crayon_views_handler_field_project.inc
 files[] = views/crayon_views_handler_field_spaces_og.inc
