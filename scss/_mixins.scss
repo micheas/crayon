@@ -1,0 +1,13 @@
+@mixin crayon($selector, $bg-color, $border-color) {
+  crayon-#{$selector} {
+    background-color: $bg-color;
+    border-color: $border-color;
+  }
+}
+
+@mixin crayonlight($selector, $bg-color, $border-color) {
+  crayon-#{$selector}.light {
+    background-color: $bg-color;
+    border-color: $border-color;
+  }
+}

@@ -1,27 +1,32 @@
 
 @import "compass/css3";
+@import "mixins";
 
 .crayon-swatch {
-  width: 30px;
-  height: 15px;
-  line-height: 15px;
   display: block;
   float: left;
+  height: 15px;
+  line-height: 15px;
   margin: {
     right: 5px;
   }
+  width: 30px;
   .crayon-swatch-label {
-    height:15px;
-    text-align:center;
-    color:#fff;
-    font-size:9px;
-    display:block;
-    overflow:hidden;
+    color: #fff;
+    display: block;
+    font: {
+      size: 9px;
+    }
+    height: 15px;
+    overflow: hidden;
+    text: {
+      align: center;
+    }
   }
 }
 .crayon-anchor {
   position: relative;
-  .crayon-popup { 
+  .crayon-popup {
     display: none;
   }
 
@@ -45,10 +50,10 @@
 
     .crayon-popup {
       .crayon-popup-label {
-        word-wrap: break-word;
         display: block;
-        padding: 5px;
         line-height: 15px;
+        padding: 5px;
+        word-wrap: break-word;
         @include border-radius(5px);
       }
 
@@ -72,89 +77,89 @@
     }
   }
 }
-.crayon-0  {background-color: #D96666; border-color: #A32929; }
-.crayon-1  {background-color: #E67399; border-color: #B1365F; }
-.crayon-2  {background-color: #B373B3; border-color: #7A367A; }
-.crayon-3  {background-color: #8C66D9; border-color: #5229A3; }
-.crayon-4  {background-color: #668CB3; border-color: #29527A; }
-.crayon-5  {background-color: #668CD9; border-color: #2952A3; }
-.crayon-6  {background-color: #59BFB3; border-color: #1B887A; }
-.crayon-7  {background-color: #65AD89; border-color: #28754E; }
-.crayon-8  {background-color: #4CB052; border-color: #0D7813; }
-.crayon-9  {background-color: #8CBF40; border-color: #528800; }
-.crayon-10 {background-color: #BFBF4D; border-color: #88880E; }
-.crayon-11 {background-color: #E0C240; border-color: #AB8B00; }
-.crayon-12 {background-color: #F2A640; border-color: #BE6D00; }
-.crayon-13 {background-color: #E6804D; border-color: #B1440E; }
-.crayon-14 {background-color: #BE9494; border-color: #865A5A; }
-.crayon-15 {background-color: #A992A9; border-color: #705770; }
-.crayon-16 {background-color: #8997A5; border-color: #4E5D6C; }
-.crayon-17 {background-color: #94A2BE; border-color: #5A6986; }
-.crayon-18 {background-color: #85AAA5; border-color: #4A716C; }
-.crayon-19 {background-color: #A7A77D; border-color: #6E6E41; }
-.crayon-20 {background-color: #C4A883; border-color: #8D6F47; }
-.crayon-21 {background-color: #C7561E; border-color: #853104; }
-.crayon-22 {background-color: #B5515D; border-color: #691426; }
-.crayon-23 {background-color: #C244AB; border-color: #5C1158; }
-.crayon-24 {background-color: #603F99; border-color: #23164E; }
-.crayon-25 {background-color: #536CA6; border-color: #182C57; }
-.crayon-26 {background-color: #3640AD; border-color: #060D5E; }
-.crayon-27 {background-color: #3C995B; border-color: #125A12; }
-.crayon-28 {background-color: #5CA632; border-color: #2F6213; }
-.crayon-29 {background-color: #7EC225; border-color: #2F6309; }
-.crayon-30 {background-color: #A7B828; border-color: #5F6B02; }
-.crayon-31 {background-color: #CF9911; border-color: #875509; }
-.crayon-32 {background-color: #D47F1E; border-color: #8C500B; }
-.crayon-33 {background-color: #B56414; border-color: #754916; }
-.crayon-34 {background-color: #914D14; border-color: #6B3304; }
-.crayon-35 {background-color: #AB2671; border-color: #5B123B; }
-.crayon-36 {background-color: #9643A5; border-color: #42104A; }
-.crayon-37 {background-color: #4585A3; border-color: #113F47; }
-.crayon-38 {background-color: #737373; border-color: #333;    }
-.crayon-39 {background-color: #41A587; border-color: #0F4B38; }
-.crayon-40 {background-color: #D1BC36; border-color: #856508; }
-.crayon-41 {background-color: #AD2D2D; border-color: #711616; }
+@include crayon('0', #D96666, #A32929);
+@include crayon('1', #E67399, #B1365F);
+@include crayon('2', #B373B3, #7A367A);
+@include crayon('3', #8C66D9, #5229A3);
+@include crayon('4', #668CB3, #29527A);
+@include crayon('5', #668CD9, #2952A3);
+@include crayon('6', #59BFB3, #1B887A);
+@include crayon('7', #65AD89, #28754E);
+@include crayon('8', #4CB052, #0D7813);
+@include crayon('9', #8CBF40, #528800);
+@include crayon('10', #BFBF4D, #88880E);
+@include crayon('11', #E0C240, #AB8B00);
+@include crayon('12', #F2A640, #BE6D00);
+@include crayon('13', #E6804D, #B1440E);
+@include crayon('14', #BE9494, #865A5A);
+@include crayon('15', #A992A9, #705770);
+@include crayon('16', #8997A5, #4E5D6C);
+@include crayon('17', #94A2BE, #5A6986);
+@include crayon('18', #85AAA5, #4A716C);
+@include crayon('19', #A7A77D, #6E6E41);
+@include crayon('20', #C4A883, #8D6F47);
+@include crayon('21', #C7561E, #853104);
+@include crayon('22', #B5515D, #691426);
+@include crayon('23', #C244AB, #5C1158);
+@include crayon('24', #603F99, #23164E);
+@include crayon('25', #536CA6, #182C57);
+@include crayon('26', #3640AD, #060D5E);
+@include crayon('27', #3C995B, #125A12);
+@include crayon('28', #5CA632, #2F6213);
+@include crayon('29', #7EC225, #2F6309);
+@include crayon('30', #A7B828, #5F6B02);
+@include crayon('31', #CF9911, #875509);
+@include crayon('32', #D47F1E, #8C500B);
+@include crayon('33', #B56414, #754916);
+@include crayon('34', #914D14, #6B3304);
+@include crayon('35', #AB2671, #5B123B);
+@include crayon('36', #9643A5, #42104A);
+@include crayon('37', #4585A3, #113F47);
+@include crayon('38', #737373, #333);
+@include crayon('39', #41A587, #0F4B38);
+@include crayon('40', #D1BC36, #856508);
+@include crayon('41', #AD2D2D, #711616);
 
-.crayon-0.light	  {background-color:	#F0C2C2;	border-color:	#A32929;	}
-.crayon-1.light	  {background-color:	#F5C7D6;	border-color:	#B1365F;	}
-.crayon-2.light	  {background-color:	#E1C7E1;	border-color:	#7A367A;	}
-.crayon-3.light	  {background-color:	#D1C2F0;	border-color:	#5229A3;	}
-.crayon-4.light	  {background-color:	#C2D1E1;	border-color:	#29527A;	}
-.crayon-5.light	  {background-color:	#C2D1F0;	border-color:	#2952A3;	}
-.crayon-6.light	  {background-color:	#BDE6E1;	border-color:	#1B887A;	}
-.crayon-7.light	  {background-color:	#C2DCC7;	border-color:	#28754E;	}
-.crayon-8.light	  {background-color:	#B5E6B5;	border-color:	#0D7813;	}
-.crayon-9.light	  {background-color:	#D1E6B3;	border-color:	#528800;	}
-.crayon-10.light	{background-color:	#E6E6B8;	border-color:	#88880E;	}
-.crayon-11.light	{background-color:	#F3E7B3;	border-color:	#AB8B00;	}
-.crayon-12.light	{background-color:	#FADCB3;	border-color:	#BE6D00;	}
-.crayon-13.light	{background-color:	#F5CCB8;	border-color:	#B1440E;	}
-.crayon-14.light	{background-color:	#E5D4D4;	border-color:	#865A5A;	}
-.crayon-15.light	{background-color:	#DDD3DD;	border-color:	#705770;	}
-.crayon-16.light	{background-color:	#D0D6DB;	border-color:	#4E5D6C;	}
-.crayon-17.light	{background-color:	#D9DEE4;	border-color:	#5A6986;	}
-.crayon-18.light	{background-color:	#CEDDDB;	border-color:	#4A716C;	}
-.crayon-19.light	{background-color:	#DCDCCB;	border-color:	#6E6E41;	}
-.crayon-20.light	{background-color:	#E7DCCE;	border-color:	#8D6F47;	}
-.crayon-21.light	{background-color:	#D6A58C;	border-color:	#853104;	}
-.crayon-22.light	{background-color:	#D0A4A9;	border-color:	#691426;	}
-.crayon-23.light	{background-color:	#D69FCC;	border-color:	#5C1158;	}
-.crayon-24.light	{background-color:	#A89AC2;	border-color:	#23164E;	}
-.crayon-25.light	{background-color:	#A4AFC9;	border-color:	#182C57;	}
-.crayon-26.light	{background-color:	#99C;	    border-color:	#060D5E;	}
-.crayon-27.light	{background-color:	#98C2A6;	border-color:	#125A12;	}
-.crayon-28.light	{background-color:	#A6C794;	border-color:	#2F6213;	}
-.crayon-29.light	{background-color:	#B6D48E;	border-color:	#2F6309;	}
-.crayon-30.light	{background-color:	#C6D090;	border-color:	#5F6B02;	}
-.crayon-31.light	{background-color:	#D9C285;	border-color:	#875509;	}
-.crayon-32.light	{background-color:	#DDB78D;	border-color:	#8C500B;	}
-.crayon-33.light	{background-color:	#CDA986;	border-color:	#754916;	}
-.crayon-34.light	{background-color:	#BB9D84;	border-color:	#6B3304;	}
-.crayon-35.light	{background-color:	#C98EAE;	border-color:	#5B123B;	}
-.crayon-36.light	{background-color:	#C09CC7;	border-color:	#42104A;	}
-.crayon-37.light	{background-color:	#9DBAC7;	border-color:	#113F47;	}
-.crayon-38.light	{background-color:	#B5B6B6;	border-color:	#333;     }	
-.crayon-39.light	{background-color:	#9BC7BA;	border-color:	#0F4B38;	}
-.crayon-40.light	{background-color:	#DDD398;	border-color:	#856508;	}
-.crayon-41.light	{background-color:	#C99;	    border-color:	#711616;	}
+@include crayonlight(0, #F0C2C2, #A32929);
+@include crayonlight(1, #F5C7D6, #B1365F);
+@include crayonlight(2, #E1C7E1, #7A367A);
+@include crayonlight(3, #D1C2F0, #5229A3);
+@include crayonlight(4, #C2D1E1, #29527A);
+@include crayonlight(5, #C2D1F0, #2952A3);
+@include crayonlight(6, #BDE6E1, #1B887A);
+@include crayonlight(7, #C2DCC7, #28754E);
+@include crayonlight(8, #B5E6B5, #0D7813);
+@include crayonlight(9, #D1E6B3, #528800);
+@include crayonlight(10, #E6E6B8, #88880E);
+@include crayonlight(11, #F3E7B3, #AB8B00);
+@include crayonlight(12, #FADCB3, #BE6D00);
+@include crayonlight(13, #F5CCB8, #B1440E);
+@include crayonlight(14, #E5D4D4, #865A5A);
+@include crayonlight(15, #DDD3DD, #705770);
+@include crayonlight(16, #D0D6DB, #4E5D6C);
+@include crayonlight(17, #D9DEE4, #5A6986);
+@include crayonlight(18, #CEDDDB, #4A716C);
+@include crayonlight(19, #DCDCCB, #6E6E41);
+@include crayonlight(20, #E7DCCE, #8D6F47);
+@include crayonlight(21, #D6A58C, #853104);
+@include crayonlight(22, #D0A4A9, #691426);
+@include crayonlight(23, #D69FCC, #5C1158);
+@include crayonlight(24, #A89AC2, #23164E);
+@include crayonlight(25, #A4AFC9, #182C57);
+@include crayonlight(26, #99C, #060D5E);
+@include crayonlight(27, #98C2A6, #125A12);
+@include crayonlight(28, #A6C794, #2F6213);
+@include crayonlight(29, #B6D48E, #2F6309);
+@include crayonlight(30, #C6D090, #5F6B02);
+@include crayonlight(31, #D9C285, #875509);
+@include crayonlight(32, #DDB78D, #8C500B);
+@include crayonlight(33, #CDA986, #754916);
+@include crayonlight(34, #BB9D84, #6B3304);
+@include crayonlight(35, #C98EAE, #5B123B);
+@include crayonlight(36, #C09CC7, #42104A);
+@include crayonlight(37, #9DBAC7, #113F47);
+@include crayonlight(38, #B5B6B6, #333);
+@include crayonlight(39, #9BC7BA, #0F4B38);
+@include crayonlight(40, #DDD398, #856508);
+@include crayonlight(41, #C99, #711616);
 
